@@ -1,0 +1,179 @@
+/* Google font import */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap");
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM PROPERTIES*/
+:root {
+  --silver: #aaaaaa;
+  --green: #33de39;
+  --white: #f3f3f3;
+  --fw-500: 500;
+  --fw-700: 700;
+  --margin-small: 1em;
+  --padding-small: 0.5em;
+}
+
+/* BODY STYLES */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: linear-gradient(85deg, #151515, #0c0d0d);
+}
+
+/* STYLES FOR NAVBAR STYLES */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 0;
+  z-index: 999;
+}
+
+#nav-bar {
+  margin-right: 2em;
+}
+
+.nav-logo {
+  margin-left: 2em;
+  color: var(--green);
+}
+
+.nav-ul {
+  display: flex;
+  gap: 8em;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: var(--fw-500);
+  padding: 1em 1.3em;
+  border-radius: 1.5em;
+  transition: 500ms ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: var(--green);
+}
+
+/* STYLES FOR FORM */
+.form-container {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10em;
+}
+
+.form-header {
+  font-weight: var(--fw-500);
+  letter-spacing: 0.1em;
+}
+
+/* STYLES FOR EMAIL INPUT */
+#email {
+  padding: var(--padding-small);
+  margin-top: var(--margin-small);
+  border-radius: 0.2em;
+  border: none;
+}
+
+/* STYLES FOR SUBMIT BUTTON */
+#submit {
+  display: block;
+  width: 100%;
+  padding: var(--padding-small);
+  margin-top: var(--margin-small);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2em;
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: var(--fw-700);
+  transition: 500ms ease-in-out;
+}
+/* HOVER EFFECT FOR SUBMIT BUTTON */
+#submit:hover {
+  background-color: #185009;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 480px) {
+  #header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    border-bottom: 2px solid var(--silver);
+  }
+
+  #nav-bar {
+    margin: 0;
+  }
+  .nav-ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    margin: 0.5em 0;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .nav-logo {
+    margin: 0.5em 0;
+  }
+
+  .form-header {
+    letter-spacing: normal;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* NAVBAR STYLES */
+  #nav-bar {
+    margin: 0 0.5em;
+  }
+  .nav-ul {
+    gap: 1em;
+    margin: 0.5em 1em;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .nav-logo {
+    margin: 0 0.5em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* NAVBAR STYLES */
+  #nav-bar {
+    margin: 0 1em;
+  }
+  .nav-ul {
+    gap: 4em;
+    margin: 0.5em 1.5em;
+  }
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .nav-logo {
+    margin: 0 1.5em;
+  }
+}
