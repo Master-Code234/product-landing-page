@@ -12,6 +12,7 @@
 :root {
   --silver: #aaaaaa;
   --green: #33de39;
+  --dark-green: #185009;
   --white: #f3f3f3;
   --fw-500: 500;
   --fw-700: 700;
@@ -23,10 +24,12 @@
 body {
   font-family: "Red Hat Display", sans-serif;
   background: linear-gradient(85deg, #151515, #0c0d0d);
+  color: var(--white);
 }
 
 /* STYLES FOR NAVBAR STYLES */
 #header {
+  background: linear-gradient(85deg, #151515, #0c0d0d);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +52,7 @@ body {
 
 .nav-ul {
   display: flex;
-  gap: 8em;
+  gap: 5vw;
   list-style: none;
 }
 
@@ -105,11 +108,47 @@ body {
 }
 /* HOVER EFFECT FOR SUBMIT BUTTON */
 #submit:hover {
-  background-color: #185009;
+  background-color: var(--dark-green);
+}
+
+/* STYLES FOR MAIN CONTENT */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  background-color: var(--dark-green);
+  margin: 10em 0;
+}
+
+.flex-container {
+  display: flex;
+  margin: 2em 0;
+  padding: 0.5em;
+}
+
+.features,
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+  width: 100%;
+  max-width: 20%;
+  margin-right: 0.5em;
 }
 
 /* SMALL SCREENS */
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   #header {
     flex-direction: column;
     justify-content: center;
@@ -138,15 +177,31 @@ body {
   .form-header {
     letter-spacing: normal;
   }
+
+  /* FEATURES STYLES */
+  .features,
+  .description,
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .features {
+    margin: 10em 0.5em;
+  }
+
+  .description {
+    max-width: 100%;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 651px) and (max-width: 767px) {
   /* NAVBAR STYLES */
   #nav-bar {
     margin: 0 0.5em;
   }
   .nav-ul {
-    gap: 1em;
     margin: 0.5em 1em;
   }
 
@@ -157,6 +212,10 @@ body {
   .nav-logo {
     margin: 0 0.5em;
   }
+  /* FEATURES SECTION STYLES */
+  .features {
+    margin: 10em 1em;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -165,7 +224,6 @@ body {
     margin: 0 1em;
   }
   .nav-ul {
-    gap: 4em;
     margin: 0.5em 1.5em;
   }
 
