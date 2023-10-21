@@ -16,7 +16,12 @@
     <!-- START NAVBAR -->
     <header id="header">
       <div class="nav-logo">
-        <h1>HGP</h1>
+        <img
+          id="header-img"
+          src="./images/logo.png"
+          alt="HGP company logo"
+          srcset=""
+        />
       </div>
 
       <nav id="nav-bar">
@@ -25,10 +30,10 @@
             <a class="nav-link" href="#features">Features</a>
           </li>
           <li class="nav-li">
-            <a class="nav-link" href="#">How it works</a>
+            <a class="nav-link" href="#how_it_works">How it works</a>
           </li>
           <li class="nav-li">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
           </li>
         </ul>
       </nav>
@@ -94,7 +99,83 @@
           </div>
         </div>
       </section>
+
+      <section id="how_it_works">
+        <iframe
+          id="video"
+          width="500"
+          height="315"
+          src="https://www.youtube.com/embed/aT1MwaUVApY?si=WKoPRybjh0yy6Pzy"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="pricing">
+        <div class="container">
+          <div class="product">
+            <div class="title">
+              <h2>Basic Package</h2>
+            </div>
+            <div class="product-description">
+              <div class="price">$500</div>
+              <ul class="list">
+                <li>24/7 Monitoring</li>
+                <li>Access Control</li>
+                <li>Smart Integration</li>
+                <li>1 Camera Included</li>
+              </ul>
+              <button class="btn">learn more</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="title">
+              <h2>Premium Package</h2>
+            </div>
+            <div class="product-description">
+              <div class="price">$800</div>
+              <ul class="list">
+                <li>24/7 Monitoring</li>
+                <li>Access Control</li>
+                <li>2 Motion detectors</li>
+                <li>2 Cameras Included</li>
+              </ul>
+              <button class="btn">learn more</button>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="title">
+              <h2>Ultimate Package</h2>
+            </div>
+            <div class="product-description">
+              <div class="price">$1000</div>
+              <ul class="list">
+                <li>24/7 Monitoring</li>
+                <li>Access Control</li>
+                <li>Snipers</li>
+                <li>8 Cameras Included</li>
+              </ul>
+              <button class="btn">learn more</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div class="wrapper">
+      <footer>
+        <ul class="links">
+          <li class="list-link"><a href="#" class="link-item">Privacy</a></li>
+          <li class="list-link"><a href="#" class="link-item">Terms</a></li>
+          <li class="list-link"><a href="#" class="link-item">Contact</a></li>
+        </ul>
+        <span class="copyright">&copy; 2023: HGP Security</span>
+      </footer>
+    </div>
     <!-- END MAIN CONTENT -->
   </body>
 </html>
